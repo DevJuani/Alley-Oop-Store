@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Contacto</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <a href="./Index.html"><img class="logo__header" src="./images/logo.jpg" alt="Logo Alley oop"></a>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li class="nav__link"><a href="index.html">Inicio</a></li>
+                <li class="nav__link"><a href="./equipos.html">Equipos</a></li>
+                <li class="nav__link"><a href="./hombres.html">Hombres</a></li>
+                <li class="nav__link"><a href="./mujeres.html">Mujeres</a></li>
+                <li class="nav__link"><a href="./contacto.html">Contacto</a></li>
+                <li><img src="./images/cart-solid-24.png" alt="Carrito"></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="form">
+            <form class="formulario" action="contacto.php" method="post">
+                <h2 class="formulario__titulo">Contacto</h2>
+                <div class="formulario__inputs">
+                    <label class="label" for="nombre">Nombre</label>
+                    <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <label class="label" for="apellido">Apellido</label>
+                    <input class="input" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    <label class="label" for="email">Email</label>
+                    <input class="input" type="email" name="email" id="email" placeholder="Email">
+                    <label class="label" for="telefono">Teléfono</label>
+                    <input class="input" type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                    <label class="label" for="mensaje">Mensaje</label>
+                    <textarea class="textarea" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                </div>
+                <button type="submit" name="enviar_formulario" id="enviar" value="get">Enviar</button>
+                <button type="reset" name="resetear_formulario" id="eliminar">Borrar Entradas</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            <div>
+                <a href="./Index.html"><img src="./images/logo.jpg" alt="Logo Alley oop" class="logo"></a>
+            </div>
+            <div id="contacto">
+                <a href="./contacto.html">
+                    <h3>Contacto</h3>
+                </a>
+            </div>
+            <div class="footer__info__contact">
+                <h3>Sobre nosotros</h3>
+                <h4><a href="https://www.facebook.com/alleyoop/">Facebook</a></h4>
+                <h4><a href="https://www.instagram.com/alleyoop/">Instagram</a></h4>
+                <h4><a href="https://www.twitter.com/alleyoop/">Twitter</a></h4>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <h4>© 2021 Copyright: <a href="https://www.facebook.com/alleyoop/">Alleyoop</a></h4>
+        </div>
+    </footer>
+</body>
+
+</html>
