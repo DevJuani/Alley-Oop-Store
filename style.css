@@ -9,10 +9,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-.h2index {
-    border: black solid 4px;
-}
-
 p {
     color: grey;
     font-size: 22px;
@@ -117,12 +113,14 @@ p {
 .productosDestacados {
     background-color: rgb(255, 255, 255);
     text-align: center;
+    border: black solid 3px;
 }
 
 /*Aplica al texto "City edition"*/
 .cityEdition {
     background-color: white;
     text-align: center;
+    border: black solid 3px;
 }
 
 /*----------------------------Footer----------------------------*/
@@ -323,7 +321,7 @@ button{
 
 /*------------------------------------------Medias Querys------------------------------------------*/
 /*------------------------------------------Animaciones------------------------------------------*/
-.camisetas :hover{
+.card :hover{
     transform: scale(1.1);
     transition: all 0.5s;
 }
