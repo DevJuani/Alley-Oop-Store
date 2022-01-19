@@ -6,65 +6,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap" rel="stylesheet">
+    <!--Link de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Link de css-->
     <link rel="stylesheet" href="./style.css">
     <title>Mujeres</title>
 </head>
 
 <body class="body">
     <header class="header">
-        <a href="./Index.html"><img class="logo__header" src="./images/logo.jpg" alt="Logo Alley oop"></a>
-        <nav class="nav">
-            <ul class="nav__links">
-                <li class="nav__link"><a href="index.html">Inicio</a></li>
-                <li class="nav__link"><a href="./equipos.html">Equipos</a></li>
-                <li class="nav__link"><a href="./hombres.html">Hombres</a></li>
-                <li class="nav__link"><a href="./mujeres.html">Mujeres</a></li>
-                <li class="nav__link"><a href="./contacto.html">Contacto</a></li>
-                <li><img src="./images/cart-solid-24.png" alt="Carrito"></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Index.html"><img src="/images/logo.jpg" alt="Alley Oop Store"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="equipos.html">Equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hombres.html">Hombres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mujeres.html">Mujeres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="main">
-        <div class="camisetas">
-            <div class="card">
-                <img src="./images/camisetas/bucks.jpg" alt="Camiseta Milwaukee Bucks">
-                <h3>Camiseta Bucks</h3>
-                <p>$200</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/heat.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Miami Heat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/celtics.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Boston Celtics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/grizzlies.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Memphis Grizzlies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="/images/camisetas/spurs.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta San Antonio Spurs</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="./images/camisetas/nuggets.jpg" alt="Camiseta Denver Nuggets">
-                <h3>Camiseta Nuggets</h3>
-                <p>$200</p>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/nuggets.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta New York Knicks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/bucks.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Milwaukee Bucks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/hetapink.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Miami Heat White</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/lakers.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Los Angeles Lakers</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="./images/camisetas/nets.jpg" alt="Camiseta Brooklyn Nets">
-                <h3>Camiseta Nets</h3>
-                <p>$200</p>
-            </div>
-            <div class="card">
-                <img src="./images/camisetas/celtics.jpg" alt="Camiseta Boston Celtics">
-                <h3>Camiseta Celtics</h3>
-                <p>$200</p>
-            </div>
-            <div class="card">
-                <img src="./images/camisetas/heat.jpg" alt="Camiseta Miami Heat">
-                <h3>Camiseta Heat</h3>
-                <p>$200</p>
-            </div>
-            <div class="card">
-                <img src="./images/camisetas/hetapink.jpg" alt="Camiseta Miami Heat celeste">
-                <h3>Camiseta Heat celeste</h3>
-                <p>$200</p>
-            </div>
-            <div class="card">
-                <img src="./images/camisetas/lakers.jpg" alt="Camiseta Los Angeles Lakers">
-                <h3>Camiseta Lakers</h3>
-                <p>$200</p>
-            </div>
-            <div class="card">
-                <img src="./images/camisetas/warriors.jpg" alt="Camiseta San Francisco Golden State Warriors">
-                <h3>Camiseta Warriors</h3>
-                <p>$200</p>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/knicks.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta New York Knicks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="images/camisetas/warriors.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Camiseta Golden State Warriors</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -87,6 +154,9 @@
             <h4>© 2021 Copyright:<a href="https://www.facebook.com/alleyoop/"> Alleyoop</a></h4>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

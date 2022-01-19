@@ -13,29 +13,44 @@ p {
     color: grey;
     font-size: 22px;
 }
-
-
+h2{
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+.h2bg{
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 3px;
+}
+ul li a{
+    color: white;
+}
 /*Aplica a la card*/
 .card {
     background-color: white;
     margin: auto;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    display: grid;
     border: black solid 3px;
-    justify-items: center;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    margin: 10px;
+
 }
 .card:hover{
     transform: scale(1.1);
     transition: all 0.5s;
 }
+.container{
+    margin: auto;
+    width: 80%;
+}
 /*--------------------------------Menú--------------------------------*/
 /*Aplica al logo del header*/
-.logo__header {
+.navbar-brand img {
     width: 100px;
     display: flex;
     padding: 8px;
@@ -43,45 +58,23 @@ p {
 }
 
 /*Aplica al nav*/
-.nav {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 50px;
+#navbarNav a{
+    color: white;
+}
+.navbar-nav li{
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.container-fluid {
+    background-color: #ff3700;
+    border-radius:  10px;
 }
 
 /*Aplica al header*/
 .header {
     background-color: #0030a8;
-    display: flex;
-    justify-content: space-between;
-}
-
-/*Aplica al UL*/
-.nav__links {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    background-color: #ff3700;
-    border-radius: 10px;
-    flex-wrap: wrap;
-}
-
-/*Aplica al LI*/
-.nav__link {
-    display: flex;
-}
-
-/*Aplica al los links de los LI*/
-.nav__link a {
-    color: white;
-    padding: 8px 60px;
-    text-decoration: none;
-}
-
-/*Aplica al pasar el mouse por encima de los links*/
-.nav__link a:hover {
-    background-color: #001878;
-    padding: 8px 60px;
 }
 
 /*--------------------------------------------------------------------*/
@@ -91,26 +84,7 @@ p {
     background-size: cover;
 }
 
-/*Aplica a las camisetas*/
-.camiseta {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 80%;
-}
-.camiseta  img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-item active img{
-    width: 100%;
-    height: auto;
-}
-
-/*Aplica a las camisetas city edition*/
-.ce img {
+.carousel-item img {
     width: 100%;
     height: auto;
 }
@@ -175,7 +149,6 @@ p {
 
 /*Aplica a la card de logos*/
 .card__logo {
-
     max-width: 300px;
     margin: auto;
     text-align: center;
@@ -248,7 +221,7 @@ p {
     padding-top: 15px;
 }
 
-button{
+.bform{
     height: 45px; 
     padding-left: 5px;
     padding-right: 5px;   
@@ -307,7 +280,8 @@ button{
         height: auto;
     }
     .form{
-        width: 200%;
+        padding: 20px;
+        width: 90%;
     }
 }
 
