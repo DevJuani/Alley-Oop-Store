@@ -1,13 +1,6 @@
 $naranja: #ff3700;
 $azul: #0030a8;
 
-@import "_menu.scss";
-@import "_card.scss";
-@import "_footer.scss";
-@import "_equipos.scss";
-@import "_contacto.scss";
-@import "_mediasquerys.scss";
-
 *{
     margin: 0;
     padding: 0;
@@ -50,6 +43,11 @@ $azul: #0030a8;
 }
 /*--------------------------------------------------------------------*/
 
-
+@import "_menu.scss";
+@import "_card.scss";
+@import "_footer.scss";
+@import "_equipos.scss";
+@import "_contacto.scss";
+@import "_mediasquerys.scss";
 
 

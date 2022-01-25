@@ -4,6 +4,7 @@
     padding: 50px;
 }
 
+
 .formulario {
     width: 90%;
     height: auto;
@@ -14,11 +15,15 @@
     background-color: #fbfbfb;
     padding-left: 30px;
         h2{
-            font-size: 39px;  
-            text-align: left; 
-            padding-bottom: 20px; 
-            color: $naranja;
-        }
+            font-size: 30px;  
+            text-align: center; 
+            padding: 20px; 
+            background-color: $naranja;
+            color: white;
+            border-radius: 10px;
+            margin-right: 8vw;
+        
+    }
         label {
             display: block;
             float: center;
@@ -63,5 +68,7 @@
             cursor: pointer;
         }
 } 
+
+
 
 

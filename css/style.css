@@ -1,4 +1,38 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+/*----------------------------------Main----------------------------------*/
+.main {
+  background-image: url(/images/background.jpg);
+  background-size: cover; }
+
+/*--------------------------------------------------------------------------*/
+.carousel-item img {
+  width: 100%;
+  height: auto; }
+
+/*--------------------------------Body--------------------------------*/
+.body {
+  font-family: 'Inter', sans-serif; }
+  .body p {
+    color: grey;
+    font-size: 22px; }
+  .body h2 {
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+    margin: auto;
+    text-align: center; }
+  .body .h2bg {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 3px; }
+  .body ul li a {
+    color: white; }
+
+/*--------------------------------------------------------------------*/
 /*--------------------------------Menú--------------------------------*/
 /*Header*/
 .header {
@@ -110,10 +144,13 @@
   background-color: #fbfbfb;
   padding-left: 30px; }
   .formulario h2 {
-    font-size: 39px;
-    text-align: left;
-    padding-bottom: 20px;
-    color: #ff3700; }
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ff3700;
+    color: white;
+    border-radius: 10px;
+    margin-right: 8vw; }
   .formulario label {
     display: block;
     float: center; }
@@ -188,38 +225,3 @@
   .form {
     padding: 20px;
     width: 90%; } }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-/*----------------------------------Main----------------------------------*/
-.main {
-  background-image: url(/images/background.jpg);
-  background-size: cover; }
-
-/*--------------------------------------------------------------------------*/
-.carousel-item img {
-  width: 100%;
-  height: auto; }
-
-/*--------------------------------Body--------------------------------*/
-.body {
-  font-family: 'Inter', sans-serif; }
-  .body p {
-    color: grey;
-    font-size: 22px; }
-  .body h2 {
-    color: black;
-    font-size: 22px;
-    padding: 10px;
-    margin: auto;
-    text-align: center; }
-  .body .h2bg {
-    background-color: white;
-    border: 3px solid black;
-    border-radius: 3px; }
-  .body ul li a {
-    color: white; }
-
-/*--------------------------------------------------------------------*/
