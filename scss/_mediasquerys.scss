@@ -1,0 +1,47 @@
+@media (max-width: 375px) {
+    .form{
+        width: 10%;
+    }
+}
+@media (max-width: 768px) {
+    .logo__equipos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav__links{
+        margin-bottom: 20px;
+    }
+    .camisetas{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ce{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form{
+        padding: 20px;
+    }
+}
+@media (max-width:1024px) {
+    .nav__links{
+        margin-bottom: 20px;
+    }
+    .ce{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form{
+        padding: 20px;
+        width: 90%;
+    }
+}
+@media (max-width: 425px) {
+    .camisetas{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ce img{
+        width: 100%;
+        height: auto;
+    }
+    .form{
+        padding: 20px;
+        width: 90%;
+    }
+}

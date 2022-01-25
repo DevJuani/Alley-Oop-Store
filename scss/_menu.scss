@@ -1,0 +1,25 @@
+/*--------------------------------Menú--------------------------------*/
+/*Header*/
+.header {
+    background-color: $azul;
+    img {
+        width: 100px;
+        display: flex;
+        padding: 8px;
+        border-radius: 50%;
+    }
+}
+/*Nav*/
+#navbarNav a{
+    color: white;
+}
+.navbar-nav li{
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+.container-fluid {
+    background-color: $naranja;
+    border-radius:  10px;
+}
+/*--------------------------------------------------------------------*/

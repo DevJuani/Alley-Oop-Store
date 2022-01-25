@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/*--------------------------------Menú--------------------------------*/
+/*Header*/
+.header {
+  background-color: #0030a8; }
+  .header img {
+    width: 100px;
+    display: flex;
+    padding: 8px;
+    border-radius: 50%; }
+
+/*Nav*/
+#navbarNav a {
+  color: white; }
+
+.navbar-nav li {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px; }
+
+.container-fluid {
+  background-color: #ff3700;
+  border-radius: 10px; }
+
+/*--------------------------------------------------------------------*/
+.card {
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  border: black solid 3px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px; }
+  .card:hover {
+    transform: scale(1.1);
+    transition: all 0.5s; }
+
+.container {
+  margin: auto;
+  width: 80%; }
+
+/*----------------------------Footer----------------------------*/
+/*Aplica al footer*/
+.footer {
+  background-color: #0030a8;
+  color: #ff3700;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .footer img {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px; }
+  .footer a {
+    color: white;
+    text-decoration: none; }
+
+/*Aplica a contacto footer*/
+#contacto a {
+  color: #ff3700;
+  text-decoration: none; }
+
+/*--------------------------------------------------------------*/
+/*------------------Pagina de equipos------------------*/
+.logo__equipos {
+  width: 90%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr);
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 100px; }
+
+.logo__equipo {
+  width: 110px;
+  height: 100px;
+  padding: 8px;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center; }
+
+/*Aplica a la card de logos*/
+.card__logo {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif; }
+  .card__logo h3 {
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 5px; }
+
+/*------------------Pagina de equipos------------------*/
+/*------------------Formulario------------------*/
+.form {
+  margin: 0 auto;
+  padding: 50px; }
+
+.formulario {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+  padding-left: 30px; }
+  .formulario h2 {
+    font-size: 39px;
+    text-align: left;
+    padding-bottom: 20px;
+    color: #ff3700; }
+  .formulario label {
+    display: block;
+    float: center; }
+  .formulario input {
+    background-color: #fbfbfb;
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ff3700;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px; }
+  .formulario textarea {
+    background-color: #fbfbfb;
+    width: 90%;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ff3700;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px; }
+  .formulario button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #ff3700;
+    border-color: #ff3700;
+    border-style: solid;
+    border-radius: 10px;
+    width: 90%;
+    cursor: pointer; }
+
+@media (max-width: 375px) {
+  .form {
+    width: 10%; } }
+
+@media (max-width: 768px) {
+  .logo__equipos {
+    grid-template-columns: repeat(2, 1fr); }
+  .nav__links {
+    margin-bottom: 20px; }
+  .camisetas {
+    grid-template-columns: repeat(1, 1fr); }
+  .ce {
+    grid-template-columns: repeat(1, 1fr); }
+  .form {
+    padding: 20px; } }
+
+@media (max-width: 1024px) {
+  .nav__links {
+    margin-bottom: 20px; }
+  .ce {
+    grid-template-columns: repeat(1, 1fr); }
+  .form {
+    padding: 20px;
+    width: 90%; } }
+
+@media (max-width: 425px) {
+  .camisetas {
+    grid-template-columns: repeat(1, 1fr); }
+  .ce img {
+    width: 100%;
+    height: auto; }
+  .form {
+    padding: 20px;
+    width: 90%; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+/*----------------------------------Main----------------------------------*/
+.main {
+  background-image: url(/images/background.jpg);
+  background-size: cover; }
+
+/*--------------------------------------------------------------------------*/
+.carousel-item img {
+  width: 100%;
+  height: auto; }
+
+/*--------------------------------Body--------------------------------*/
+.body {
+  font-family: 'Inter', sans-serif; }
+  .body p {
+    color: grey;
+    font-size: 22px; }
+  .body h2 {
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+    margin: auto;
+    text-align: center; }
+  .body .h2bg {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 3px; }
+  .body ul li a {
+    color: white; }
+
+/*--------------------------------------------------------------------*/

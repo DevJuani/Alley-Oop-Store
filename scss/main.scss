@@ -1,0 +1,55 @@
+$naranja: #ff3700;
+$azul: #0030a8;
+
+@import "_menu.scss";
+@import "_card.scss";
+@import "_footer.scss";
+@import "_equipos.scss";
+@import "_contacto.scss";
+@import "_mediasquerys.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*----------------------------------Main----------------------------------*/
+.main {
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+}
+
+/*--------------------------------------------------------------------------*/
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/*--------------------------------Body--------------------------------*/
+.body {
+    font-family: 'Inter', sans-serif;
+    p {
+        color: grey;
+        font-size: 22px;
+    }
+    h2{
+        color: black;
+        font-size: 22px;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+    }
+    .h2bg{
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
+    ul li a{
+        color: white;
+    }
+    
+}
+/*--------------------------------------------------------------------*/
+
+
+
+

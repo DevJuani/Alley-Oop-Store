@@ -1,0 +1,19 @@
+.card {
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    border: black solid 3px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    &:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+}

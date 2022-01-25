@@ -1,0 +1,67 @@
+/*------------------Formulario------------------*/
+.form{
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.formulario {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    padding-left: 30px;
+        h2{
+            font-size: 39px;  
+            text-align: left; 
+            padding-bottom: 20px; 
+            color: $naranja;
+        }
+        label {
+            display: block;
+            float: center;
+        }
+        input {
+            background-color: #fbfbfb;
+            width: 90%;
+            height: 40px;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: $naranja;
+            margin-top: 10px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            background-color: #fbfbfb;
+            width: 90%;
+            height: 150px;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: $naranja;
+            margin-top: 10px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            padding-top: 15px;
+        }
+        button{
+            height: 45px; 
+            padding-left: 5px;
+            padding-right: 5px;   
+            margin-bottom: 20px; 
+            margin-top: 10px;   
+            text-transform: uppercase;
+            background-color: $naranja;
+            border-color: $naranja;
+            border-style: solid; 
+            border-radius: 10px;  
+            width: 90%;   
+            cursor: pointer;
+        }
+} 
+
+
