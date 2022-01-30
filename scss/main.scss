@@ -39,7 +39,14 @@ $azul: #0030a8;
     ul li a{
         color: white;
     }
-    
+    span{
+        color: $naranja;
+    }
+}
+.compra{
+    background-color: white;
+    color: $naranja;
+    font-family: 'Inter', sans-serif;
 }
 /*--------------------------------------------------------------------*/
 
@@ -48,6 +55,7 @@ $azul: #0030a8;
 @import "_footer.scss";
 @import "_equipos.scss";
 @import "_contacto.scss";
+@import "_camisetas.scss";
 @import "_mediasquerys.scss";
 
 

@@ -1,47 +1,65 @@
 @media (max-width: 375px) {
-    .form{
+    .form {
         width: 10%;
     }
 }
+
 @media (max-width: 768px) {
     .logo__equipos {
         grid-template-columns: repeat(2, 1fr);
     }
-    .nav__links{
+
+    .nav__links {
         margin-bottom: 20px;
     }
-    .camisetas{
+
+    .camisetas {
         grid-template-columns: repeat(1, 1fr);
     }
-    .ce{
+
+    .ce {
         grid-template-columns: repeat(1, 1fr);
     }
-    .form{
+
+    .form {
         padding: 20px;
     }
 }
+
 @media (max-width:1024px) {
-    .nav__links{
+    .nav__links {
         margin-bottom: 20px;
     }
-    .ce{
+
+    .ce {
         grid-template-columns: repeat(1, 1fr);
     }
-    .form{
+
+    .form {
         padding: 20px;
         width: 90%;
     }
 }
+
 @media (max-width: 425px) {
-    .camisetas{
+    .camisetas {
         grid-template-columns: repeat(1, 1fr);
     }
-    .ce img{
+
+    .ce img {
         width: 100%;
         height: auto;
     }
-    .form{
+
+    .form {
         padding: 20px;
         width: 90%;
+    }
+
+    .mainVenta {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1.6fr 1.1fr;
+        gap: 0px 0px;
     }
 }
