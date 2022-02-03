@@ -268,8 +268,31 @@
   .form {
     padding: 20px;
     width: 90%; }
-  .mainVenta {
+  .mainPlayers .containerPlayers {
+    grid-template-columns: 1fr; } }
+
+.mainPlayers {
+  background-image: url(/images/background.jpg);
+  background-size: cover; }
+  .mainPlayers .roster {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    border: 3px solid black;
+    background-color: #dfd3b1; }
+    .mainPlayers .roster img {
+      width: 110px;
+      height: 100px;
+      padding: 8px;
+      border-radius: 30px;
+      object-fit: cover;
+      object-position: center; }
+  .mainPlayers h1, .mainPlayers h2 {
+    color: #ff3700;
+    font-family: 'Inter', sans-serif;
+    color: black; }
+  .mainPlayers .containerPlayers {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1.6fr 1.1fr;
-    gap: 0px 0px; } }
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }

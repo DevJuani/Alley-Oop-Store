@@ -56,10 +56,9 @@
         width: 90%;
     }
 
-    .mainVenta {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.3fr 1.6fr 1.1fr;
-        gap: 0px 0px;
+    .mainPlayers{
+        .containerPlayers {
+            grid-template-columns: 1fr;
+        }
     }
 }
