@@ -5,7 +5,7 @@
 
 /*----------------------------------Main----------------------------------*/
 .main {
-  background-image: url(/images/background.jpg);
+  background-image: url("../images/background.jpg");
   background-size: cover; }
 
 /*--------------------------------------------------------------------------*/
@@ -272,7 +272,7 @@
     grid-template-columns: 1fr; } }
 
 .mainPlayers {
-  background-image: url(/images/background.jpg);
+  background-image: url("../images/background.jpg");
   background-size: cover; }
   .mainPlayers .roster {
     padding: 10px;
