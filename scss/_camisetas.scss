@@ -1,16 +1,3 @@
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    background-color: white;
-    img{
-        padding: 2%;
-        width: 100%;
-        height: auto;
-    }
-}
-
 .descripcion {
     display: flex;
     flex-direction: column;
@@ -25,9 +12,7 @@
         text-align: left;
     }
 }
-.mainVenta{
-    padding: 3%;
-}
+
 .carrito{
     margin: 5%;
     button{
@@ -38,4 +23,9 @@
         border-radius: 3px;
         padding: 2%;
     }
+}
+
+.modal-body img{
+    width: 100%;
+    height: 100%;
 }
