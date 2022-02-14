@@ -2,6 +2,10 @@
     .form {
         width: 10%;
     }
+    .mainPlayers .containerPlayers {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -24,6 +28,10 @@
     .form {
         padding: 20px;
     }
+    .mainPlayers .containerPlayers {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
 }
 
 @media (max-width:1024px) {
@@ -38,6 +46,10 @@
     .form {
         padding: 20px;
         width: 90%;
+    }
+    .mainPlayers .containerPlayers {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 
@@ -56,9 +68,8 @@
         width: 90%;
     }
 
-    .mainPlayers{
-        .containerPlayers {
-            grid-template-columns: 1fr;
-        }
+    .mainPlayers .containerPlayers {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
