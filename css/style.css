@@ -249,10 +249,7 @@
 
 @media (max-width: 375px) {
   .form {
-    width: 10%; }
-  .mainPlayers .containerPlayers {
-    grid-template-columns: 1fr;
-    justify-items: center; } }
+    width: 10%; } }
 
 @media (max-width: 768px) {
   .logo__equipos {
@@ -278,7 +275,7 @@
     padding: 20px;
     width: 90%; }
   .mainPlayers .containerPlayers {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center; } }
 
 @media (max-width: 425px) {

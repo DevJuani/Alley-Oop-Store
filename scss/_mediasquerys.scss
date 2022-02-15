@@ -2,10 +2,6 @@
     .form {
         width: 10%;
     }
-    .mainPlayers .containerPlayers {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
 }
 
 @media (max-width: 768px) {
@@ -47,10 +43,12 @@
         padding: 20px;
         width: 90%;
     }
+    
     .mainPlayers .containerPlayers {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
+
 }
 
 @media (max-width: 425px) {
@@ -72,4 +70,5 @@
         grid-template-columns: 1fr;
         justify-items: center;
     }
+
 }
