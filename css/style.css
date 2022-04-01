@@ -283,3 +283,32 @@
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
+
+
+.imagenCarrito{
+  width: 30%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  border: 3px solid #ff3700;
+  border-radius: 10px;
+}
+.shopping-cart{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #ff3700;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.comprarButton{
+  background-color: #0030a8;
+  float: right;
+}
+
+.comprarButton:hover{
+  background-color: #ff3700;
+}
