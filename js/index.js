@@ -1,4 +1,5 @@
 //anclar imagen en el css para que no se mueva
+//En la funcion de que dispara el boton comprar, si hay un item, lo borro y le doy a comprar, se realiza con exito
 
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart')
 addToShoppingCartButtons.forEach(addToCartButton => {
@@ -11,25 +12,25 @@ buyButton.addEventListener('click', buyButtonClicked)
 
 const shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer')
 
-function addToCartClicked(event){
+function addToCartClicked(event) {
     const button = event.target
-    const item =button.closest('.modal-content')
+    const item = button.closest('.modal-content')
 
-const itemTitle = item.querySelector('.modal-title').innerText
-const itemPrice = item.querySelector('.modal-price').innerText
-const itemImage = item.querySelector('.modal-image').src
+    const itemTitle = item.querySelector('.modal-title').innerText
+    const itemPrice = item.querySelector('.modal-price').innerText
+    const itemImage = item.querySelector('.modal-image').src
 
-addItemToShoppingCart(itemTitle, itemPrice, itemImage)
+    addItemToShoppingCart(itemTitle, itemPrice, itemImage)
 }
 
-function addItemToShoppingCart(itemTitle, itemPrice, itemImage){
+function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
 
 
     const elementsTitle = shoppingCartItemsContainer.getElementsByClassName('shoppingCartItem')
     //Para que cuando agregue una item se aumente el numero y no agregue una row
     //ERROR DE ELEMNTQUANTITY
-    for(let i=0; i<elementsTitle.length; i++){
-        if(elementsTitle[i].innerText === itemTitle){
+    for (let i = 0; i < elementsTitle.length; i++) {
+        if (elementsTitle[i].innerText === itemTitle) {
             //let elementQuantity = elementsTitle[i].parentElement.parentElement.parentElement.querySelector('.shoppingCartItemQuantity');
         }
         //elementQuantity.value++;
@@ -64,21 +65,21 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage){
     shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', removeItemFromShoppingCart)
 
     //funcion de para aniadir mas de un item al carrito
-    shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change',quantityChanger)
+    shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change', quantityChanger)
 
     updateShoppingCartTotal()
 }
 
 //Funcion de actualizacion del carrito: Items y total
-function updateShoppingCartTotal(){
+function updateShoppingCartTotal() {
     let total = 0;
     const shoppingCartTotal = document.querySelector('.shoppingCartTotal')
     const shoppingCartItems = document.querySelectorAll('.shoppingCartItem')
-    console.log('pedo',shoppingCartItems)
+    console.log('pedo', shoppingCartItems)
 
     shoppingCartItems.forEach(shoppingCartItems => {
         const shoppingCartItemPriceElement = shoppingCartItems.querySelector('.shoppingCartItemPrice')
-        const shoppigCartItemPrice = Number(shoppingCartItemPriceElement.textContent.replace('$',''))
+        const shoppigCartItemPrice = Number(shoppingCartItemPriceElement.textContent.replace('$', ''))
         const shoppingCartItemQuantityElement = shoppingCartItems.querySelector('.shoppingCartItemQuantity')
         const shoppingCartItemQuantity = Number(shoppingCartItemQuantityElement.value)
         total += shoppigCartItemPrice * shoppingCartItemQuantity
@@ -88,26 +89,47 @@ function updateShoppingCartTotal(){
 
 
 //Funcion de Borrado de items del carrito
-function removeItemFromShoppingCart(event){
+function removeItemFromShoppingCart(event) {
     const buttonClicked = event.target
     buttonClicked.closest('.shoppingCartItem').remove()
     updateShoppingCartTotal()
 }
 
 //Funcion de cambio de cantidad de items del carrito
-function quantityChanger(event){
+function quantityChanger(event) {
     const input = event.target
-    if(isNaN(input.value) || input.value <= 0){
+    if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
-        alert('Para eliminar un item del carrito, presione el boton X')
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Para eliminar un item, usar el boton X',
+            showConfirmButton: false,
+            timer: 1700
+        })
     }
     updateShoppingCartTotal()
 }
 
 //Funcion que dispara el boton comprar
-//agregar que no se pueda comprar si no hay items en el carrito
-function buyButtonClicked(){
-    shoppingCartItemsContainer.innerHTML = ''
-    alert('Gracias por su compra')
-    updateShoppingCartTotal()
+function buyButtonClicked() {
+    if (shoppingCartItemsContainer.childElementCount === 0) {
+        Swal.fire({
+            position: 'center',
+            icon: 'info',
+            title: 'No hay items en el carrito',
+            showConfirmButton: false,
+            timer: 1700
+        })
+    } else {
+        shoppingCartItemsContainer.innerHTML = ''
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Compra realizada con exito',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        updateShoppingCartTotal()
+    }
 }

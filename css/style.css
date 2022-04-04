@@ -6,7 +6,7 @@
 /*----------------------------------Main----------------------------------*/
 .main {
   background-image: url("../images/background.jpg");
-  background-size: cover; }
+  background-size: cover;}
 
 /*--------------------------------------------------------------------------*/
 .carousel-item img {
@@ -290,3 +290,22 @@
   .mainPlayers .containerPlayers {
     grid-template-columns: 1fr;
     justify-items: center; } }
+
+.shopping-cart{
+  background-color: white;
+  border-radius: 10px;
+}
+.imagenCarrito{
+  width: 30%;
+  height: auto;
+}
+.comprarButton{
+  background-color: #ff3700;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  border: #ff3700;
+  border-radius: 3px;
+}
+.comprarButton:hover{
+  background-color: #0030a8;
+}
