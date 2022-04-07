@@ -1,6 +1,8 @@
 //anclar imagen en el css para que no se mueva
 //En la funcion de que dispara el boton comprar, si hay un item, lo borro y le doy a comprar, se realiza con exito
 
+let carrito = []
+
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart')
 addToShoppingCartButtons.forEach(addToCartButton => {
     addToCartButton.addEventListener('click', addToCartClicked)
@@ -19,13 +21,61 @@ function addToCartClicked(event) {
     const itemTitle = item.querySelector('.modal-title').innerText
     const itemPrice = item.querySelector('.modal-price').innerText
     const itemImage = item.querySelector('.modal-image').src
+    const producto = {
+        title: itemTitle,
+        price: itemPrice,
+        image: itemImage
+    };
+    carrito.push(producto)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    mostrarCarrito();
 
-    addItemToShoppingCart(itemTitle, itemPrice, itemImage)
+    //addItemToShoppingCart(itemTitle, itemPrice, itemImage)
 }
 
-function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
+function mostrarCarrito() {
+    let shoppingCartRow = document.createElement('div')
+    let productosJson = JSON.parse(localStorage.getItem('carrito'))
+    
+    for (let elemento of productosJson) {
+        shoppingCartRow.innerHTML = `<div class="row shoppingCartItem">
+                    <div class="col-6">
+                        <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                            <img class="imagenCarrito" src=${elemento.image} class="shopping-cart-image">
+                            <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${elemento.title}</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+                            <p class="item-price mb-0 shoppingCartItemPrice">${elemento.price}</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div
+                            class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
+                            <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                                value="1">
+                            <button class="btn btn-danger buttonDelete" type="button">X</button>
+                        </div>
+                    </div>
+                </div>`
+    }
 
+    shoppingCartItemsContainer.appendChild(shoppingCartRow);
+    //Boton de borrar item
+    //filter con el title, y si es igual, se borra
+    shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', removeItemFromShoppingCart)
 
+    function checkIfItemExists(title) {
+        return JSON.parse(localStorage.getItem('carrito')).some(item => item.title === title)
+    }
+
+    //funcion de para aniadir mas de un item al carrito
+    shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change', quantityChanger)
+    
+    updateShoppingCartTotal()
+}
+/*function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     const elementsTitle = shoppingCartItemsContainer.getElementsByClassName('shoppingCartItem')
     //Para que cuando agregue una item se aumente el numero y no agregue una row
     //ERROR DE ELEMNTQUANTITY
@@ -62,20 +112,20 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
     shoppingCartRow.innerHTML = shoppingCartContent;
     shoppingCartItemsContainer.appendChild(shoppingCartRow);
 
+    //Boton de borrar item
     shoppingCartRow.querySelector('.buttonDelete').addEventListener('click', removeItemFromShoppingCart)
 
     //funcion de para aniadir mas de un item al carrito
     shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change', quantityChanger)
 
     updateShoppingCartTotal()
-}
+}*/
 
 //Funcion de actualizacion del carrito: Items y total
 function updateShoppingCartTotal() {
     let total = 0;
     const shoppingCartTotal = document.querySelector('.shoppingCartTotal')
     const shoppingCartItems = document.querySelectorAll('.shoppingCartItem')
-    console.log('pedo', shoppingCartItems)
 
     shoppingCartItems.forEach(shoppingCartItems => {
         const shoppingCartItemPriceElement = shoppingCartItems.querySelector('.shoppingCartItemPrice')
@@ -131,5 +181,6 @@ function buyButtonClicked() {
             timer: 1500
         })
         updateShoppingCartTotal()
+        window.localStorage.clear()
     }
 }
